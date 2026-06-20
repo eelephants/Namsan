@@ -114,6 +114,11 @@ export const ContentConatiner = styled.div<{ isProfile: boolean }>`
     text-align: center;
     margin-bottom: 48px;
 
+    /* GatsbyImage는 wrapper 폭만 제어해 내부 종횡비 로직을 보존한다(찌그러짐 방지) */
+    .gatsby-image-wrapper {
+      width: 100%;
+    }
+
     ${mediaQuery('tablet1024', `${size('auto', '100%')}margin-bottom: 40px;`)};
   }
 
@@ -122,10 +127,6 @@ export const ContentConatiner = styled.div<{ isProfile: boolean }>`
     @media (max-width: ${ScreenBreakPoints['mobile']}) {
       padding: ${({ isProfile }) => (isProfile ? '52px' : '40px')} 0px 64px;
     }
-  }
-
-  img {
-    width: 100%;
   }
 `;
 

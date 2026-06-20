@@ -48,6 +48,7 @@ export const Tab = styled.li<{ isActive?: boolean }>`
   ${flex()}
 
   padding: 6px 20px;
+  white-space: nowrap;
   letter-spacing: -0.4px;
 
   font-weight: ${FontWeight.bold};
